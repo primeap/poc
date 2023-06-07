@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CI-CD-TEST
 
 # Controls when the workflow will run
 on:
@@ -33,5 +33,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo "--------->> BRANCH NAME " ${{ github.head_ref || github.ref_name }} 
+          branchName = ${{ github.head_ref || github.ref_name }} 
+          echo "+++++++++>>>>>>>>>>> " $branchName
           echo Add other actions to build,
           echo test, and deploy your project.
